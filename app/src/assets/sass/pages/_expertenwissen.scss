@@ -1,0 +1,150 @@
+.expertenwissen-page {
+  background-color: $color-white-1;
+  overflow-x: hidden !important;
+  overflow-y: auto;
+
+  max-width: 1500px;
+  height: calc(100% - 100px);
+
+  &__header {
+    color: $color-blue-dark;
+
+    position: relative;
+    z-index: 2;
+
+    padding: 6% 6% 3% 6%;
+    margin-bottom: 0;
+
+    text-align: center;
+
+    @media only screen and (min-width: $breakpoint-desktop) {
+      padding-bottom: 15px;
+    }
+  }
+
+  &__subheader {
+    color: $color-blue-grey;
+
+    position: relative;
+    z-index: 2;
+
+    text-align: center;
+
+    margin-bottom: 20px;
+
+    @media only screen and (min-width: $breakpoint-desktop) {
+      margin-bottom: 50px;
+    }
+  }
+
+  &__content {
+    position: relative;
+    z-index: 2;
+    margin: auto;
+
+    width: 100%;
+    max-width: 1200px;
+
+    display: flex;
+    flex-direction: column;
+
+    @media only screen and (min-width: $breakpoint-post-mobile) {
+    }
+
+    @media only screen and (min-width: $breakpoint-tablet) {
+    }
+
+    @media only screen and (min-width: $breakpoint-desktop) {
+      width: 75%;
+      -ms-grid-columns: 25% 25% 25% 25%;
+      display: grid;
+      grid-template-columns: 25% 25% 25% 25%;
+
+      justify-content: space-between;
+    }
+  }
+
+  &__item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    background-color: $color-white;
+    box-shadow: 0 0px 10px #acacac;
+
+    // width: 90%;
+    width: 90%;
+
+    margin: 10px auto;
+    padding: 10px 10px;
+
+    @media only screen and (min-width: $breakpoint-desktop) {
+      box-shadow: 0 0px 12px #cacaca;
+
+      margin: 10px 5%;
+      padding: 10px;
+    }
+
+    @media not all and (min-resolution: 0.001dpcm) {
+      @supports (-webkit-appearance: none) {
+        .safari_only {
+          display: block;
+        }
+      }
+    }
+  }
+
+  &__link {
+    color: $color-blue-dark;
+
+    font-size: 15px;
+
+    text-decoration: none;
+
+    &:hover {
+      color: $color-blue-light-2;
+      text-decoration: none !important;
+    }
+  }
+
+  &__icon {
+    width: 14px !important;
+    height: 14px !important;
+  }
+
+  &__btn {
+    position: relative;
+    top: 0px;
+
+    width: 90%;
+    display: block;
+    margin: 20px auto;
+    margin-bottom: 50px;
+    z-index: 2;
+
+    max-width: 500px;
+
+    @media only screen and (min-width: 550px) {
+      width: 300px;
+      margin-left: calc(50% - 150px);
+    }
+
+    @media only screen and (min-width: $breakpoint-desktop) {
+    }
+
+    @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+    }
+  }
+}
+
+.btnBackground {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 100px;
+  background-image: linear-gradient(
+    rgba(243, 245, 246, 0),
+    rgba(243, 245, 246, 1)
+  );
+  z-index: 2;
+}

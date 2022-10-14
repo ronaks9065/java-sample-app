@@ -1,0 +1,49 @@
+#app {
+  font-family: $font-family-secondary;
+  font-size: $font-size-content;
+}
+
+h3 {
+  font-family: $font-family-primary;
+  font-size: $font-size-header;
+}
+
+.bold {
+  font-weight: 600;
+}
+
+.centered {
+  text-align: center;
+}
+
+@font-face {
+  font-family: "vw-antiqua";
+  src: url("assets/fonts/antiqua/VWAGTheAntiqua-Regular.woff") format("woff");
+}
+
+@font-face {
+  font-family: "vw-antiqua-bold";
+  src: url("assets/fonts/antiqua/VWAGTheAntiqua-Bold.woff") format("woff");
+}
+
+@font-face {
+  font-family: "vw-sans";
+  src: url("assets/fonts/sans/VWAGTheSans-Regular.woff") format("woff");
+}
+
+@font-face {
+  font-family: "vw-sans-bold";
+  src: url("assets/fonts/sans/VWAGTheSans-Bold.woff") format("woff");
+}
+
+.bluegrey {
+  color: $color-blue-grey;
+}
+
+// .bluedark {
+//   color: red !important;
+// }
+
+strong {
+  font-family: "vw-sans-bold";
+}

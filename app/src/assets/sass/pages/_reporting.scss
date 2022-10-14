@@ -1,0 +1,168 @@
+table,
+th,
+td,
+tr {
+  background-color: $color-blue-light-quarter;
+  padding: 2px 20px;
+}
+
+th {
+  background-color: $color-blue-light;
+}
+
+tr {
+  cursor: pointer;
+}
+
+tr:hover {
+  opacity: 0.6;
+}
+
+table {
+  width: 100%;
+}
+
+.blue2 {
+  background-color: $color-blue-light-half;
+}
+
+.bottom-row {
+  margin-bottom: 20px;
+}
+
+.reporting-page {
+  display: block;
+  margin: auto;
+  width: 80%;
+  color: $color-blue-dark;
+  margin-bottom: 40px;
+}
+
+.reporting {
+  &__top {
+    margin: auto;
+
+    display: flex;
+    justify-content: space-between;
+
+    max-width: 910px;
+    min-width: 700px;
+  }
+
+  &__header {
+    font-size: 24px;
+    color: $color-white;
+    background-color: $color-blue-dark;
+    margin: 30px 0 0 0;
+    padding: 10px 20px;
+  }
+
+  &__table {
+    display: block;
+    margin: auto;
+    max-width: 910px;
+    min-width: 700px;
+
+    &--number {
+      color: white;
+    }
+  }
+}
+
+.report-filter {
+  display: flex;
+  justify-content: flex-start;
+
+  &__button {
+    border: 1px solid $color-blue-dark;
+    background-color: $color-white;
+    padding: 0 10px;
+    color: $color-blue-dark;
+    height: 25px;
+    border-radius: 6px;
+
+    &:hover {
+      color: $color-white;
+      background-color: $color-blue-dark;
+    }
+
+    &:active {
+      color: $color-white;
+      background-color: $color-blue-light;
+      border: 1px solid $color-blue-light;
+    }
+
+    align-self: flex-end;
+  }
+}
+
+select {
+  cursor: pointer;
+  border: 1px solid $color-blue-light-2;
+  outline: none;
+  background-color: $color-white;
+  color: $color-blue-dark;
+  margin-right: 20px;
+  // -webkit-appearance: none;
+}
+
+select::expand {
+  display: none;
+}
+
+.reporting-links {
+  display: block;
+  margin: auto;
+
+  width: 100%;
+  max-width: 910px;
+  min-width: 700px;
+
+  &-link {
+    cursor: pointer;
+
+    &:hover {
+      color: $color-blue-light !important;
+      outline: none;
+      text-decoration: none;
+    }
+
+    &:active {
+      color: $color-blue-light-2 !important;
+    }
+
+    &:visited {
+      color: $color-blue-dark;
+    }
+  }
+
+  width: 100%;
+  margin-top: 20px;
+}
+
+.report-hr {
+  display: block;
+  margin: 20px auto;
+
+  width: 100%;
+  max-width: 910px;
+  min-width: 700px;
+}
+
+#dlfeedback {
+  cursor: pointer;
+
+  &:hover {
+    color: $color-blue-light !important;
+    outline: none;
+    text-decoration: none;
+  }
+
+  &:active {
+    color: $color-blue-light-2 !important;
+  }
+
+  &:visited {
+    color: $color-blue-dark !important;
+  }
+}

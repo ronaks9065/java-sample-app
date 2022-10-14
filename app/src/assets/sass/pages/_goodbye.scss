@@ -1,0 +1,28 @@
+.goodbye {
+  text-align: center;
+  display: block;
+  margin: auto;
+  padding: 0 15px;
+  max-width: 350px;
+
+  &__title {
+    font-weight: 600;
+  }
+
+  &__text {
+    margin-top: 20px;
+  }
+
+  &__container {
+    width: 90%;
+    max-width: 330px;
+    display: flex;
+    justify-content: space-between;
+    margin: auto;
+    margin-top: 30px;
+  }
+
+  &__button {
+    max-width: 150px;
+  }
+}

@@ -1,0 +1,12 @@
+.terms {
+  display: block;
+  margin: auto;
+  width: 80%;
+  max-width: 1200px;
+
+  &__title {
+    margin-bottom: 20px !important;
+    text-align: center;
+    font-family: $font-family-secondary-bold;
+  }
+}

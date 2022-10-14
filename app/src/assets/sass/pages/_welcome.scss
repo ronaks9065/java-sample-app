@@ -1,0 +1,84 @@
+.centered-text {
+  text-align: center;
+  margin: 20px 0 7% 0;
+}
+
+#welcome-bg {
+  position: absolute;
+  top: -100px;
+  z-index: 0;
+  display: none;
+  width: 100%;
+  min-width: 1200px;
+  max-width: $max-width;
+  // min-height: 1350px;
+  overflow: hidden;
+
+  @media only screen and (min-width: $breakpoint-tablet) {
+    display: block;
+    margin: auto;
+  }
+
+  @media only screen and (min-width: $breakpoint-desktop) {
+    // top: 60px;
+    display: block;
+  }
+
+  @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+    left: 0px;
+    width: 1500px;
+  }
+}
+
+#welcome-box {
+  z-index: 4;
+
+  background-color: rgba(253, 254, 254, 0.92);
+
+  width: 80%;
+  max-width: 600px;
+  height: auto;
+
+  @media only screen and (min-width: $breakpoint-tablet) {
+    min-height: 400px;
+    max-height: 400px;
+  }
+
+  color: $color-blue-grey;
+
+  text-align: center;
+
+  margin: 10% 0;
+  padding: 2% 30px;
+}
+
+#datenschutz-logo {
+  width: 68px;
+  margin: auto;
+}
+
+.welcome-title {
+  margin-top: 16px;
+}
+
+.welcome-text {
+  margin-top: 8px;
+  width: 100%;
+}
+
+.welcome-button {
+  margin-top: 24px;
+  margin-bottom: 10px;
+
+  width: 100% !important;
+}
+
+.welcome-page {
+  display: flex;
+  justify-content: center;
+  position: relative;
+
+  @media only screen and (min-width: $breakpoint-tablet) {
+    height: calc(100vh - 100px);
+  }
+}

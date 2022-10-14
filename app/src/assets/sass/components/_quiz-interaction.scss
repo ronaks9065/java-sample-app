@@ -1,0 +1,37 @@
+.quiz-interaction {
+  &__question {
+    font-weight: 600;
+  }
+
+  &__answer {
+    font-size: $font-size-question;
+    color: $color-blue-dark;
+    width: 98%;
+
+    padding: 15px 10px;
+    margin: 10px 0;
+    cursor: pointer;
+
+    background-color: $color-white;
+    box-shadow: 2px 5px 9px #dbdbdb;
+
+    &--correct {
+      color: $color-answer-correct;
+      border: 2px solid $color-answer-correct !important;
+    }
+
+    &--incorrect {
+      color: $color-answer-incorrect;
+      border: 2px solid $color-answer-incorrect !important;
+    }
+  }
+
+  &--no-events {
+    pointer-events: none;
+  }
+}
+
+.quiz--inactive > * {
+  color: $color-disabled;
+  pointer-events: none;
+}

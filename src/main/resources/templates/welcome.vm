@@ -1,0 +1,19 @@
+<!--------------------------------------------------- Welcome Page------------------------------------------------>
+<video autoplay muted loop id="welcome-bg">
+    ## use relative url: $req.contextPath contains application context
+    <source src="$req.contextPath/download/resources/com.prodyna.dataprotection-navigator:dpn-resources/images/welcome-bg.mp4" type="video/mp4">
+</video>
+
+<div id="welcome-box" class="container d-flex flex-column justify-content-between align-items-center">
+    <div id="datenschutz-logo" class="welcome-part" data-name="welcome_logo">
+        <!-- IMAGE MACRO for Datenschutz Logo -->
+    </div>
+    <div class="welcome-part">
+        <!-- HEADING MACRO -->
+        <h3 data-name="welcome_heading"></h3>
+    </div>
+    <div class="welcome-part" data-name="welcome_content">
+        <!-- TEXT MACRO -->
+    </div>
+    <button class="btn--standard welcome-part" data-name="button_text" onclick="dpn.navigateTo('rules')"></button>
+</div>

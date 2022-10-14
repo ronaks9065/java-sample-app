@@ -1,0 +1,231 @@
+// .certificate-page-container {
+//   display: block;
+//   height: 88vh;
+//   min-height: 600px;
+//   max-height: 700px;
+// }
+
+.certificate {
+  margin: auto;
+
+  &__text {
+    color: $color-blue-dark;
+
+    margin: 0 10px;
+  }
+
+  &__image {
+    width: 85%;
+    display: block;
+    margin: 3% auto;
+    box-shadow: 2px 2px 8px #a5a5a5;
+  }
+
+  &__button {
+    width: 60%;
+    max-width: 200px;
+    height: 40px;
+    font-size: $font-size-button;
+    margin: 40px auto 0 auto;
+    padding: 10px 50px;
+    cursor: pointer;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    color: $color-blue-dark !important;
+    box-shadow: 0px 2px 8px #d6d6d6;
+
+    &:active {
+      background-color: $color-blue-light;
+      border: 1px solid $color-blue-light;
+    }
+  }
+
+  &__message {
+    text-align: center;
+    color: $color-grey;
+    margin-top: 50px;
+  }
+}
+
+#printableArea {
+  width: 85%;
+  max-width: 275px;
+  max-height: 375px;
+
+  display: block;
+  margin: 3% auto;
+
+  box-shadow: 2px 6px 18px #b9b9b9;
+
+  background-color: $color-white;
+
+  @media print {
+    max-width: 100%;
+    max-height: 100%;
+  }
+}
+
+.printable {
+  &__bg {
+    position: relative;
+    top: 3.5px;
+    left: 0;
+  }
+
+  &__logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin: auto;
+    padding: 12% 0 4% 0;
+
+    width: 30%;
+
+    @media print {
+      width: 270px;
+      padding: 14% 0 14% 0;
+    }
+  }
+
+  &__white {
+    display: none;
+
+    background-color: $color-white;
+    z-index: 4;
+    width: 150vw;
+    height: 150vh;
+    position: fixed;
+    top: -25vh;
+    left: -25vw;
+  }
+
+  &__hr {
+    border: solid black 0.5px;
+    width: 100%;
+    margin-bottom: 0.25rem;
+  }
+
+  &__body {
+    // background-color: red;
+    // background-image: url('../../images/certificate/bg-2x.jpg');
+    z-index: 6;
+    height: 340px;
+
+    position: relative;
+    top: -20rem;
+    left: 0;
+
+    @media print {
+      top: -75rem;
+    }
+  }
+
+  &__title {
+    color: $color-blue-dark;
+    font-size: 0.9rem;
+    text-align: center;
+    padding: 16% 0 6% 0;
+
+    max-width: 60%;
+    display: block;
+    margin: auto;
+
+    @media print {
+      font-size: 50px;
+      padding: 7%;
+    }
+  }
+
+  &__text {
+    color: #4c5356;
+    font-size: 0.5rem;
+    text-align: center;
+
+    max-width: 78%;
+
+    display: block;
+    margin: auto;
+
+    @media print {
+      font-size: 32px;
+    }
+  }
+
+  &__stamp {
+    width: 17%;
+    position: relative;
+    top: -10px;
+
+    @media print {
+    }
+  }
+}
+
+@page {
+  size: auto;
+  margin: 0mm;
+}
+
+@media print {
+  #body * {
+    visibility: hidden !important;
+  }
+
+  #printableArea * {
+    visibility: visible;
+  }
+  #printableArea {
+    position: fixed;
+    top: -20px;
+    left: 0px;
+    z-index: 5;
+    height: 100vh;
+    width: 100vw;
+  }
+
+  .printable__white {
+    display: block;
+  }
+}
+
+.print-icon {
+  width: 22px;
+  height: 24px;
+  transform: translateX(-5px) !important;
+
+  @media only screen and (min-width: $breakpoint-tablet) {
+    width: 25px;
+  }
+}
+
+.certificate-btn-inner {
+  color: $color-blue-dark;
+  background: none !important;
+  border: 0px;
+}
+
+.certificate-btn-inner-disabled {
+  color: $color-disabled !important;
+  background: none !important;
+  border: 0px;
+
+  pointer-events: none;
+}
+
+#druckenbtn {
+  @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+    margin-top: 0px;
+  }
+}
+
+.dl-btn-text-de {
+  transform: translateX(-20px) !important;
+}
+
+.dl-btn-text-en {
+  transform: translateX(-7px) !important;
+}

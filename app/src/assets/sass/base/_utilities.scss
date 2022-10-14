@@ -1,0 +1,82 @@
+.colorbluedark {
+  color: $color-blue-dark !important;
+}
+
+.marginbottom {
+  margin-bottom: 8px;
+}
+
+.margintop {
+  margin-top: 15px;
+}
+
+.marginright {
+  margin-right: 40px;
+}
+
+.external-link {
+  color: $color-blue-dark !important;
+
+  &:hover {
+    color: $color-blue-light-2 !important;
+  }
+}
+
+.listparent > ul > li {
+  margin-bottom: 15px;
+  margin-left: 18px;
+  list-style-image: url(assets/images/misc/bulletpoint.png);
+}
+
+.spanparent > span > a {
+  color: $color-blue-dark !important;
+
+  &:hover {
+    color: $color-blue-light-2 !important;
+  }
+}
+
+.paddingtop {
+  padding-top: 70px;
+}
+
+.paddingbottom {
+  padding-bottom: 16px;
+}
+
+.bold-sans {
+  font-family: "vw-sans-bold";
+}
+
+.forefront {
+  z-index: 2 !important;
+}
+
+.load-wheel {
+  width: 70px;
+  display: block;
+  margin: 150px auto;
+}
+
+@-moz-document url-prefix() {
+  .u-bandaid {
+    position: absolute;
+    display: none;
+
+    top: 0px;
+    width: 18px;
+    height: 100%;
+    background-color: $color-white;
+
+    @media only screen and (min-width: $breakpoint-tablet) {
+      display: none;
+      left: 217px;
+    }
+    @media only screen and (min-width: $breakpoint-tablet-horizontal) {
+      left: 343px;
+    }
+    @media only screen and (min-width: $breakpoint-post-desktop) {
+      left: 416px;
+    }
+  }
+}

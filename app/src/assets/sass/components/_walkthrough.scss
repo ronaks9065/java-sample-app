@@ -1,0 +1,131 @@
+.walkthrough-container {
+  height: 100vh;
+  width: 100vw;
+  z-index: 100;
+  position: fixed;
+  background-color: rgb(255, 255, 255);
+  overflow: hidden !important;
+}
+
+.walkthrough {
+  position: absolute;
+  top: 0;
+  z-index: 100;
+  max-width: 1500px;
+}
+
+.wtNavColor {
+  background-color: rgb(255, 255, 255) !important;
+}
+
+.wt__container {
+  &--top {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    // position: relative;
+    scrollbar-width: none !important;
+
+    width: 100vw;
+    max-width: 1500px;
+    height: calc(100vh - 66px);
+    overflow: hidden !important;
+
+    margin: auto;
+
+    @media only screen and (min-width: $breakpoint-tablet) {
+      flex-direction: row;
+    }
+  }
+}
+
+.wt__image {
+  &--mobile {
+    width: 76%;
+    display: block;
+    top: 0;
+    margin-top: -70px;
+    margin-left: 12%;
+
+    @media only screen and (min-width: $breakpoint-tablet) {
+      display: none;
+    }
+  }
+
+  &--desktop {
+    display: none;
+    overflow-x: hidden !important;
+    z-index: -1;
+
+    @media only screen and (min-width: $breakpoint-tablet) {
+      display: block;
+      position: absolute;
+      top: 20px;
+      right: 0px;
+
+      width: 100%;
+      max-width: 1300px;
+    }
+  }
+}
+
+.wt {
+  &__left {
+    background-color: $color-white;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    // flex-grow: 1;
+    position: absolute;
+    bottom: 70px;
+    padding: 20px 20px;
+
+    width: 100%;
+    min-width: 330px;
+    max-width: 560px;
+    height: 220px;
+    z-index: 200 !important;
+
+    @media only screen and (min-width: $breakpoint-tablet) {
+      bottom: 0;
+      padding-top: 110px;
+      padding-left: 40px;
+      position: relative;
+      justify-content: flex-start;
+      overflow: hidden !important;
+      width: 30vw;
+      height: 90%;
+      max-height: 90%;
+    }
+  }
+
+  &__title {
+    font-family: $font-family-primary;
+    color: $color-blue-dark;
+    font-size: 28px;
+  }
+
+  &__text {
+    color: $color-blue-grey;
+    margin-top: 5px;
+    height: 50px;
+  }
+
+  &__button {
+    display: block;
+    margin: auto;
+    margin-top: 20px;
+    width: 45%;
+
+    @media only screen and (min-width: $breakpoint-tablet) {
+      margin: 40px 20px 0 0;
+      max-width: 150px;
+    }
+  }
+}
+
+.wt__button-container {
+  margin-top: 0;
+  display: flex;
+}

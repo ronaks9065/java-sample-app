@@ -1,0 +1,35 @@
+// @import "abstracts/functions";
+@import "abstracts/variables";
+
+@import "components/buttons";
+
+@import "layout/navbar";
+
+@import "base/animations";
+@import "base/base";
+@import "base/typography";
+@import "base/utilities";
+
+@import "components/page23";
+@import "components/dot-indicator";
+@import "components/quiz-interaction";
+@import "components/toggle-slider";
+@import "components/modal";
+@import "components/maps";
+@import "components/end-bottom";
+@import "components/confetti";
+@import "components/walkthrough";
+
+@import "pages/cars";
+@import "pages/welcome";
+@import "pages/rules";
+@import "pages/levels";
+@import "pages/expertenwissen";
+@import "pages/menu";
+@import "pages/quiz";
+@import "pages/feedback";
+@import "pages/certificate";
+@import "pages/finish";
+@import "pages/goodbye";
+@import "pages/reporting";
+@import "pages/terms";

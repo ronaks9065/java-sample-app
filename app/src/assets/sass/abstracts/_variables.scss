@@ -1,0 +1,49 @@
+// COLORS
+$color-white-1: #f3f5f6;
+$color-white-2: #fdfefe;
+$color-grey-1: rgb(185, 185, 185);
+$color-grey-2: rgb(190, 190, 190);
+$color-blue-dark: #335f7d;
+// $color-blue-dark: #204157;
+$color-blue-light: #8dbfcf;
+$color-blue-light-half: rgba(141, 191, 207, 0.5);
+$color-blue-light-quarter: rgba(141, 191, 207, 0.25);
+$color-blue-light-2: #c6dfe7;
+$color-blue-light-3: #eef5f8;
+$color-blue-grey: #4c5356;
+
+$color-white: #ffffff;
+$color-grey: rgb(128, 128, 128);
+$color-grey-2: #eff0f2;
+$color-grey-3: #7f8789;
+$color-grey-text: rgb(70, 70, 70);
+
+$color-disabled: rgb(189, 189, 189);
+
+$color-answer-correct: #95a844;
+$color-answer-partial-correct: #fccd23;
+$color-answer-incorrect: #a21e4d;
+
+// BREAKPOINTS
+$breakpoint-post-mobile: 400px;
+$breakpoint-tablet: 768px;
+$breakpoint-tablet-horizontal: 1024px;
+$breakpoint-desktop: 1224px;
+$breakpoint-post-desktop: 1324px;
+
+// FONTS
+$font-family-primary: vw-antiqua;
+$font-family-primary-bold: vw-antiqua-bold;
+$font-family-secondary: vw-sans;
+$font-family-secondary-bold: vw-sans-bold;
+
+$font-size-header: 28px;
+$font-size-content: 16px;
+$font-size-button: 18px;
+
+$font-size-question: 14px;
+
+// LAYOUT
+$standard-padding: 0 6%;
+
+$max-width: 1500px;

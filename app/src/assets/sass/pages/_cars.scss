@@ -1,0 +1,197 @@
+.carhighlight {
+  color: $color-blue-light;
+}
+
+.cars-page {
+  width: 100%;
+  height: calc(100vh - 66px);
+
+  margin: auto;
+
+  display: flex;
+  flex-direction: column;
+
+  justify-content: space-between;
+  position: relative;
+  // z-index: 2;
+
+  background: linear-gradient(rgba(243, 245, 246, 1) 0%, $color-white 75%);
+  background-size: 100%;
+  background-position: 0 30%;
+
+  @media only screen and (min-width: $breakpoint-tablet) {
+    background-size: auto;
+    background-position: center;
+    min-height: 900px;
+
+    justify-content: flex-start;
+  }
+
+  &__header {
+    padding: 6% 0 0 0;
+
+    text-align: center;
+
+    @media only screen and (min-width: $breakpoint-tablet) {
+      padding: 4%;
+      padding-bottom: 20px;
+    }
+  }
+
+  &__text {
+    text-align: center;
+    color: $color-blue-grey;
+
+    padding: $standard-padding;
+    margin: auto;
+    margin-top: 0;
+    margin-bottom: 10px;
+
+    @media only screen and (min-width: $breakpoint-tablet) {
+      max-width: 50%;
+    }
+
+    @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+      max-width: 100%;
+    }
+  }
+
+  &__buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    position: relative;
+    z-index: 3;
+    top: -70px;
+
+    width: 100%;
+    min-width: 122px;
+    padding: 18px 6%;
+
+    @media only screen and (min-width: $breakpoint-tablet) {
+      width: 450px;
+      padding: 0;
+      position: absolute;
+      top: 620px;
+      left: calc(50% - 225px);
+    }
+  }
+
+  &__button {
+    width: 47.6%;
+
+    @media only screen and (min-width: $breakpoint-tablet) {
+      // width: 47%;
+      width: 210px;
+    }
+  }
+}
+
+.car-carousel {
+  display: flex;
+  justify-content: space-between;
+
+  position: relative;
+  z-index: 3;
+
+  align-self: center;
+
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  scrollbar-width: none !important;
+
+  height: 90vh;
+  max-width: 900px;
+
+  margin-top: -120px;
+  margin-bottom: -100px;
+
+  @media only screen and (min-width: $breakpoint-tablet) {
+    height: auto;
+    padding-bottom: 120px;
+    margin-top: -85px;
+  }
+
+  @media only screen and (min-width: $breakpoint-desktop) {
+    padding-bottom: 150px;
+  }
+
+  &__car {
+    flex: 0 0 auto;
+    display: flex;
+    flex-direction: column;
+
+    width: 50%;
+
+    @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+      display: block;
+      z-index: 3;
+    }
+
+    &--description {
+      align-self: center;
+      text-align: center;
+      font-size: 10px;
+      margin-top: -35px;
+
+      @media only screen and (min-width: $breakpoint-tablet) {
+        font-size: 12px;
+        margin-top: -55px;
+      }
+    }
+
+    @media only screen and (min-width: $breakpoint-tablet) {
+      width: 30%;
+      margin-top: -55px;
+    }
+  }
+}
+
+#car1 {
+  animation-name: car-enter-1;
+  animation-duration: 2s;
+  animation-timing-function: ease-out;
+  cursor: pointer;
+}
+
+#car2 {
+  animation-name: car-enter-2;
+  animation-duration: 2s;
+  animation-timing-function: ease-out;
+  cursor: pointer;
+}
+
+#car3 {
+  animation-name: car-enter-3;
+  animation-duration: 2s;
+  animation-timing-function: ease-out;
+  cursor: pointer;
+}
+
+.car-ready {
+  position: relative;
+  margin-top: -220%;
+
+  opacity: 1;
+
+  @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+    margin-top: -230%;
+  }
+}
+
+.honeycomb {
+  position: absolute;
+  left: 50%;
+  z-index: 2;
+
+  top: 160px;
+  margin-left: -200px;
+  width: 400px;
+
+  @media only screen and (min-width: $breakpoint-tablet) {
+    top: 200px;
+    margin-left: -250px;
+    width: 500px;
+  }
+}

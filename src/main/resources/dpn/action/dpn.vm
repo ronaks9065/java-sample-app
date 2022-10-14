@@ -1,0 +1,10 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Datenschutz navigator</title>
+    <script>
+      console.log("index.vm: redirecting to $webappRoot/index.html");
+      window.location = "$req.contextPath/dpn/index.html?prefix=$req.contextPath";
+    </script>
+  </head>
+</html>

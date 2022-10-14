@@ -1,0 +1,102 @@
+button {
+  outline: none !important;
+}
+
+.btn--standard {
+  font-family: $font-family-primary;
+  font-size: $font-size-button;
+
+  color: $color-white;
+  background-color: $color-blue-dark;
+
+  height: 40px;
+  width: 88%;
+
+  border: 1px solid $color-blue-dark;
+
+  &:active {
+    background-color: $color-blue-light;
+    border: 1px solid $color-blue-light;
+  }
+}
+
+.btn--secondary {
+  font-family: $font-family-primary;
+  font-size: $font-size-button;
+
+  color: $color-blue-dark;
+  background-color: rgb(255, 255, 255);
+
+  height: 40px;
+  width: 90%;
+
+  border: 1px solid $color-blue-dark;
+
+  &:active {
+    background-color: $color-blue-light;
+    border: 1px solid $color-blue-light;
+    color: white;
+  }
+}
+
+.btn--disabled {
+  font-family: $font-family-primary;
+  font-size: $font-size-button;
+
+  color: $color-white;
+  background-color: $color-disabled;
+
+  height: 40px;
+  width: 88%;
+
+  border: 1px solid $color-disabled;
+
+  pointer-events: none;
+}
+
+.btn__end--1 {
+  height: 40px;
+  width: 48%;
+  max-width: 260px;
+
+  font-family: $font-family-primary;
+  font-size: $font-size-button;
+
+  border: 1px solid $color-blue-dark;
+  color: $color-white;
+  background-color: $color-blue-dark;
+
+  &:active {
+    background-color: $color-blue-light;
+    border: 1px solid $color-blue-light;
+  }
+
+  @media only screen and (min-width: $breakpoint-tablet) {
+    height: 40px;
+    width: 88%;
+  }
+}
+
+.btn__end--2 {
+  height: 40px;
+  width: 48%;
+  max-width: 260px;
+  // margin-right: 20px;
+
+  font-family: $font-family-primary;
+  font-size: $font-size-button;
+
+  border: 1px solid $color-blue-dark;
+  color: $color-blue-dark;
+  background-color: $color-white;
+
+  &:active {
+    background-color: $color-blue-light;
+    border: 1px solid $color-blue-light;
+  }
+
+  @media only screen and (min-width: $breakpoint-tablet) {
+    height: 40px;
+    width: 88%;
+  }
+}

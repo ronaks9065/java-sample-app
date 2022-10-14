@@ -1,0 +1,53 @@
+.dot-end {
+  width: 8px;
+  height: 8px;
+  background-color: $color-grey-1;
+  border-radius: 50%;
+}
+
+.dot-current {
+  background-color: $color-blue-dark !important;
+}
+
+.dot__container {
+  display: flex;
+  justify-content: space-between;
+
+  width: 40px;
+}
+
+#dot__container1 {
+  display: none;
+
+  @media only screen and (min-width: $breakpoint-tablet-horizontal) {
+    display: flex;
+  }
+}
+
+#dot__container2 {
+  display: flex;
+  margin: 10px auto;
+
+  @media only screen and (min-width: $breakpoint-tablet-horizontal) {
+    display: none;
+  }
+}
+
+#dot__container3 {
+  display: none;
+  width: 70px;
+
+  @media only screen and (min-width: $breakpoint-tablet) {
+    display: flex;
+  }
+}
+
+#dot__container4 {
+  display: flex;
+  margin: 10px auto;
+  width: 70px;
+
+  @media only screen and (min-width: $breakpoint-tablet) {
+    display: none;
+  }
+}

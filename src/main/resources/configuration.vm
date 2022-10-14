@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>$i18n.getText("configuration.heading")</title>
+        <script src="$req.contextPath/download/resources/com.prodyna.dataprotection-navigator/js/dpn-admin.js" type="text/javascript"></script>
+    </head>
+    <body>
+        <form method="POST" class="aui long-label" name="editDPNconfig" id="editDPNconfig">
+            <h2>$i18n.getText("configuration.general.subheading")</h2>
+            <div class="field-group">
+                <label for="dpnSpaceKey" id="dpnSpaceKey-label">$i18n.getText("configuration.general.spacekey.label"):</label>
+                <input type="text" name="dpnSpaceKey" id="dpnSpaceKey" class="text" />
+                <div class="description">
+                    $i18n.getText("configuration.general.spacekey.description")
+                </div>
+            </div>
+            <div class="field-group">
+                <label for="requiredRole" id="requiredRole-label">$i18n.getText("configuration.general.requiredRole.label"):</label>
+                <input type="text" name="requiredRole" id="requiredRole" class="text" />
+                <div class="description">
+                    $i18n.getText("configuration.general.requiredRole.description")
+                </div>
+            </div>
+            <div class="field-group">
+                <input type="submit" value="$i18n.getText("configuration.save")" class="button">
+                <div id="successMessage" style="display: none">
+                    $i18n.getText("configuration.general.successMessage")
+                </div>
+            </div>
+        </form>
+    </body>
+</html>

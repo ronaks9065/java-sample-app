@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<atlassian-plugin key="${atlassian.plugin.key}" name="${project.name}" plugins-version="2">
+    <plugin-info>
+        <description>${project.description}</description>
+        <param name="plugin-icon">images/pluginIcon.png</param>
+        <param name="plugin-logo">images/pluginLogo.png</param>
+        <param name="configure.url">/admin/plugins/dpn/configure.action</param>
+        <vendor name="${project.organization.name}" url="${project.organization.url}"/>
+        <version>${project.version}</version>
+    </plugin-info>
+
+    <resource location="dataprotection-navigator" name="i18n" type="i18n"/>
+
+    <!--
+    <resource type="download" name="images/" location="/images" />
+    -->
+
+    <resource type="download" name="webapp/" location="/webapp/"/>
+    <resource type="download" name="js/" location="/js/"/>
+
+    <rest key="rest" path="/dpn" version="1.0">
+        <description>Provides services for the data protection navigator.</description>
+    </rest>
+
+    <web-resource key="dpn-resources" name="dpn-resources">
+        <dependency>com.atlassian.auiplugin:ajs</dependency>
+        <resource location="/images" name="images/" type="download"/>
+        <resource location="/js/dpn-admin.js" name="dpn-admin" type="download"/>
+        <context>alt.admin</context>
+        <context>com.prodyna.dataprotection-navigator</context>
+    </web-resource>
+
+    <servlet-filter key="pretty-url-filter" name="pretty-url-filter" weight="60" location="before-dispatch"
+                    class="com.prodyna.dataprotection.navigator.servlet.PrettyUrlFilter">
+        <url-pattern>/dpn</url-pattern>
+        <url-pattern>/dpn/*</url-pattern>
+    </servlet-filter>
+
+    <xhtml-macro key="dataProtector-ContentMacro" name="datenschutz-navigator-content"
+                 class="com.prodyna.dataprotection.navigator.macro.ContentMacro">
+        <category name="formatting"/>
+        <description key="welcomescreen.macro.desc"/>
+        <parameters>
+            <parameter name="Type" type="enum">
+                <value name="Content"/>
+                <value name="Quiz"/>
+            </parameter>
+            <parameter name="Name" type="string"/>
+            <parameter name="Language" type="enum">
+                <value name="Deutsch"/>
+                <value name="Englisch"/>
+            </parameter>
+            <parameter name="Level" type="enum">
+                <value name="Basic"/>
+                <value name="User"/>
+                <value name="Leader"/>
+            </parameter>
+        </parameters>
+    </xhtml-macro>
+
+    <xwork key="dpn-action-xwork" name="dpn-action-xwork">
+        <package extends="default" name="dpn-admin" namespace="/admin/plugins/dpn">
+            <action class="com.prodyna.dataprotection.navigator.action.WelcomeAction" name="configure">
+                <result name="welcome" type="velocity">/configuration.vm</result>
+            </action>
+        </package>
+    </xwork>
+</atlassian-plugin>
